@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recommended Cat Coffee Shops</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="shops-page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1 class="logo">Best Cat Coffee Shops</h1>
+    <nav class="nav-buttons">
+      <button onclick="location.href='index.html'">home</button>
+      <button onclick="location.href='contact.html'">contact</button>
+    </nav>
+  </header>
+
+  <!-- reccos  -->
+  <main class="shops-content" id="recommendations">
+
+    <section class="shops-intro">
+      <p class="eyebrow">CHANTAL'S CURATED GUIDE</p>
+      <h1>coffee, comfort<br>and cats.</h1>
+      <p>
+        cozy Metro Manila spots selected for their atmosphere,
+        cat-friendly experience, and community-centered stories.
+      </p>
+      <span>click a location to read the full review and browse photos ↓</span>
+    </section>
+
+    <!-- cards from script.js -->
+    <section
+      class="location-grid"
+      id="location-grid"
+      aria-label="Recommended cat coffee shops"
+    ></section>
+
+    <p class="visit-note">
+      café schedules and policies change—check the latest official listing before visiting.
+    </p>
+
+  </main>
+
+  <!-- reusable modal for every recommendation (add nalang sa js)-->
+  <section class="location-modal" id="location-modal" aria-labelledby="modal-title">
+    <button class="modal-backdrop" type="button" aria-label="Close modal"></button>
+
+    <article class="modal-panel">
+      <button class="modal-close" type="button" aria-label="Close modal">×</button>
+
+      <div class="photo-carousel">
+        <img id="modal-photo" src="" alt="">
+
+        <div class="carousel-arrows">
+          <button class="carousel-previous" type="button" aria-label="Previous photo">&lt;</button>
+          <button class="carousel-next" type="button" aria-label="Next photo">&gt;</button>
+        </div>
+      </div>
+
+      <div class="modal-details">
+        <p class="eyebrow" id="modal-eyebrow"></p>
+        <h2 id="modal-title"></h2>
+        <p class="modal-location" id="modal-location"></p>
+
+        <div class="rating-row">
+          <strong id="modal-rating"></strong>
+          <span id="modal-rating-note"></span>
+        </div>
+
+        <div class="review-block personal-review">
+          <h3>my take</h3>
+          <p id="modal-personal-review"></p>
+        </div>
+
+        <div class="review-block">
+          <h3 id="modal-source-title"></h3>
+          <blockquote id="modal-external-review"></blockquote>
+          <a id="modal-source-link" href="" target="_blank" rel="noopener">
+            read the review ↗
+          </a>
+        </div>
+
+        <div class="detail-chips" id="modal-tags"></div>
+      </div>
+    </article>
+  </section>
+
+</body>
+</html>
