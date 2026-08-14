@@ -1,4 +1,3 @@
-// Add a new recommendation by copying one item in this list.
 const coffeeShops = [
   {
     name: "Cats & Crumbs",
@@ -24,20 +23,20 @@ const coffeeShops = [
     name: "Catpuccino Coffee House",
     city: "Taguig City",
     label: "most intimate",
-    summary: "A warm, close-knit café experience known for its Persian cat residents and caring team.",
-    location: "Taguig City, Metro Manila",
+    summary: "Coffee, comfort, and feline company in a small neighborhood café with a relaxed pace.",
+    location: "1 MRT Avenue, Capistrano Street, Hagonoy, Taguig City",
     rating: "editor's pick",
     ratingNote: "for a smaller, personal atmosphere",
-    personalReview: "Best for visitors who prefer a quieter room and more time noticing each cat's personality. The small-scale setting feels personal, so this is the spot I would choose over a louder, busier café.",
+    personalReview: "My pick for cat lovers who prefer a quieter neighborhood stop over a large themed venue. The cozy scale should make it easier to slow down with a drink and notice each resident cat's personality.",
     sourceTitle: "from another visitor",
     externalReview: "“An intimate hideaway” with a team whose care extends to cats beyond the café.",
     sourceUrl: "https://www.linkedin.com/posts/iammissseven_cleopatracat-catcafetaguig-coffeeandcats-activity-7375965820973264897-1iPS",
     sourceLabel: "read the visitor story ↗",
-    tags: ["Persian cats", "intimate space", "community care"],
+    tags: ["neighborhood café", "intimate space", "Taguig"],
     photos: [
-      { src: "assets/cats&crumbs2.jpg", alt: "Warm cat café seating" },
-      { src: "assets/cat&crumbs3.jpg", alt: "Cat relaxing in a café" },
-      { src: "assets/cats&crumbs1.jpg", alt: "A cozy café interior" }
+      { src: "assets/catpuccino1.jpg", alt: "Warm cat café seating" },
+      { src: "assets/catpuccino2.jpg", alt: "Cat relaxing in a café" },
+      { src: "assets/catpuccino3.jpg", alt: "A cozy café interior" }
     ]
   },
   {
@@ -55,9 +54,129 @@ const coffeeShops = [
     sourceLabel: "read the feature ↗",
     tags: ["rescued puspins", "adoption advocacy", "Maginhawa"],
     photos: [
-      { src: "assets/cat&crumbs3.jpg", alt: "Cat café resident resting" },
-      { src: "assets/cats&crumbs1.jpg", alt: "Relaxed cat café setting" },
-      { src: "assets/cats&crumbs2.jpg", alt: "Cats in a social café space" }
+      { src: "assets/catcafe1.jpg", alt: "Cat café resident resting" },
+      { src: "assets/catcafe2.jpg", alt: "Relaxed cat café setting" },
+      { src: "assets/catcafe3.jpg", alt: "Cats in a social café space" }
+    ]
+  },
+  {
+    name: "Miao Cat Cafe",
+    city: "Quezon City",
+    label: "pioneer pick",
+    summary: "A Congressional Avenue pioneer remembered for a homey cat room, cakes, and two-hour visits.",
+    location: "2/F Cake2Go, #7 Congressional Avenue, Quezon City",
+    rating: "4.1 / 5",
+    ratingNote: "117 historical reviews collected by Sluurpy",
+    personalReview: "I would have come here for the generous two-hour cat time and stayed for dessert. The chocolate chip muffins, lava cake, and banana pecan muffin make this the strongest sweet-tooth pick in the guide.",
+    sourceTitle: "what past visitors said",
+    externalReview: "Visitors described the café as homey and cozy, with plenty of cat furniture; cakes and muffins were among the most praised orders.",
+    sourceUrl: "https://www.sluurpy.com/en/quezon-city/restaurant/7108566/miao-cat-cafe",
+    sourceLabel: "browse 117 collected reviews ↗",
+    tags: ["archive pick", "desserts", "Congressional Avenue"],
+    photos: [
+      { src: "assets/miao1.jpg", alt: "Cozy cat café atmosphere" },
+      { src: "assets/miao2.jpg", alt: "A cat resting inside a café" },
+      { src: "assets/miao3.jpg", alt: "Cat-friendly café seating" }
+    ]
+  },
+  {
+    name: "Bengal Brew",
+    city: "Quezon City",
+    label: "best for Bengal fans",
+    summary: "A Cubao café built around playful Bengal cats in a tropical, mini-jungle-inspired lounge.",
+    location: "G/F Manhattan Parkview, Manhattan Garden City, Cubao, Quezon City",
+    rating: "4.2 / 5",
+    ratingNote: "580 historical reviews collected by Sluurpy",
+    personalReview: "This is the obvious choice for anyone fascinated by Bengals. I love that the mini-jungle room suits the breed's energy; I would pair the cat hour with the visitor-favorite caramel frappe and sans rival.",
+    sourceTitle: "what past visitors said",
+    externalReview: "Visitors praised the number of friendly Bengals, the photo-friendly jungle design, and staff who could answer questions about the cats.",
+    sourceUrl: "https://mysafespacejournal.com/2019/03/14/bengal-brew-cat-cafe-purr-fect-for-you/",
+    sourceLabel: "read the full visitor review ↗",
+    tags: ["archive pick", "Bengal cats", "Cubao"],
+    photos: [
+      { src: "assets/bengal1.jpg", alt: "A playful cat in a café lounge" },
+      { src: "assets/bengal2.jpg", alt: "Cat café play area" },
+      { src: "assets/bengal3.jpg", alt: "A relaxed café interior" }
+    ]
+  },
+  {
+    name: "Nekohige Cafe",
+    city: "Manila",
+    label: "best study nook",
+    summary: "A Japanese-inspired upstairs café pairing resident cats with affordable comfort food and drinks.",
+    location: "2/F, 1173 Vicente Cruz Street corner Dapitan Street, Sampaloc, Manila",
+    rating: "editor's pick",
+    ratingNote: "for students and quiet hangouts",
+    personalReview: "My university-belt pick for a low-key study break. The homey anime details, filling Japanese comfort food, and late-day café atmosphere sound ideal when I want cat company without a formal restaurant experience.",
+    sourceTitle: "from a local café guide",
+    externalReview: "The café is described as a cozy, quiet hobby lounge with friendly roaming cats and student-budget ramen, curry, rice bowls, coffee, milk tea, and matcha.",
+    sourceUrl: "https://outoftownblog.com/for-your-purrfect-weekend-list-of-cat-cafes-in-metro-manila/",
+    sourceLabel: "read the café guide ↗",
+    tags: ["Japanese-inspired", "student-friendly", "Sampaloc"],
+    photos: [
+      { src: "assets/nekohige1.jpg", alt: "A cozy cat café lounge" },
+      { src: "assets/nekohige2.jpg", alt: "Warm café seating" },
+      { src: "assets/nekohige3.jpg", alt: "A resident café cat" }
+    ]
+  },
+  {
+    name: "Coterie Cat Cafe",
+    city: "Parañaque City",
+    label: "best south hangout",
+    summary: "A mellow Aguirre Avenue coffee and co-working spot with light bites and resident cats.",
+    location: "272 Aguirre Avenue, BF Homes, Parañaque City",
+    rating: "editor's pick",
+    ratingNote: "for coffee, cats, and quiet work",
+    personalReview: "I would choose Coterie for a slow work session or casual date in the South. Its all-day café feel and roaming cats make it sound more flexible than a timed cat-lounge visit.",
+    sourceTitle: "from a local café guide",
+    externalReview: "The space is described as cozy and home-like, with soft lighting, comfortable seating, simple café fare, and a calm atmosphere for working or unwinding.",
+    sourceUrl: "https://outoftownblog.com/for-your-purrfect-weekend-list-of-cat-cafes-in-metro-manila/",
+    sourceLabel: "read the café guide ↗",
+    tags: ["co-working", "BF Homes", "all-day café"],
+    photos: [
+      { src: "assets/coterie1.jpg", alt: "Comfortable cat café seating" },
+      { src: "assets/coterie2.jpg", alt: "A calm café cat area" },
+      { src: "assets/coterie3.jpg", alt: "Cat relaxing near café guests" }
+    ]
+  },
+  {
+    name: "Gilmore Cat Café",
+    city: "Quezon City",
+    label: "archive listing",
+    summary: "A former Granada Street cat café whose surviving listings and visitor reports are now historical.",
+    location: "No. 6 Xavier Hills Condominium, Granada Street, Valencia, Quezon City",
+    rating: "verify first",
+    ratingNote: "current operating status is unclear",
+    personalReview: "I would treat this as a piece of Metro Manila cat-café history, not a guaranteed stop. The address is well documented, but conflicting old hours and a report of an unexpected closure mean calling ahead is essential.",
+    sourceTitle: "from a past visitor",
+    externalReview: "One visitor reported arriving at the posted opening time and finding the café closed, even after receiving conflicting opening information.",
+    sourceUrl: "https://liasfoodjourney.blogspot.com/2015/12/cat-cafe-not.html",
+    sourceLabel: "read the historical visitor report ↗",
+    tags: ["archive pick", "call ahead", "Granada Street"],
+    photos: [
+      { src: "assets/gilmore1.jpg", alt: "Cat café archive illustration" },
+      { src: "assets/gilmore2.jpg", alt: "Historic cat café atmosphere" },
+      { src: "assets/gilmore3.jpg", alt: "Cat lounge seating" }
+    ]
+  },
+  {
+    name: "Le Cat Coffee Shop",
+    city: "Las Piñas City",
+    label: "south pioneer",
+    summary: "A pioneering southern cat café remembered for friendly cats, coffee, pastries, and family visits.",
+    location: "76 Gloria Diaz Street, BF Resort Village, Las Piñas City (historical address)",
+    rating: "4 / 5",
+    ratingNote: "rating from a historical visitor review",
+    personalReview: "This would be my family-bonding pick in the South. I like the separate café-and-cat-lounge setup, and the reports of friendly cats make it sound especially welcoming for a relaxed first visit.",
+    sourceTitle: "from a past visitor",
+    externalReview: "A visitor called it a fun, stress-relieving family activity and praised the soft grilled panini with its sweet strawberry-jam twist.",
+    sourceUrl: "http://eatsdelicious.blogspot.com/2015/08/cats-and-coffee-at-le-cat-coffee-shop.html",
+    sourceLabel: "read the full visitor review ↗",
+    tags: ["archive pick", "family-friendly", "BF Resort"],
+    photos: [
+      { src: "assets/lecat2.jpg", alt: "Family-friendly cat café lounge" },
+      { src: "assets/lecat3.jpg", alt: "Friendly café cat" },
+      { src: "assets/lecat1.jpg", alt: "Coffee shop seating area" }
     ]
   }
 ];
