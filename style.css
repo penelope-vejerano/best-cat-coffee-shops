@@ -60,21 +60,32 @@
     align-items: center;
     gap: 8px;
   }
-  
-  .nav-buttons button,
-  .owner-copy > button {
+
+  .nav-buttons ul {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav-buttons a {
+    display: inline-block;
     background: none;
     border: none;
     color: white;
     font-family: Garamond, serif;
     font-size: 17px;
     margin: 0 5px;
+    padding: 7px 10px;
+    text-decoration: none;
     cursor: pointer;
     transition: 0.3s;
   }
-  
-  .nav-buttons button:hover,
-  .owner-copy > button:hover {
+
+  .nav-buttons a:hover,
+  .nav-buttons a[aria-current="page"] {
     color: #ff935d;
     transform: translateY(-2px);
   }
@@ -95,7 +106,8 @@
      OWNER PAGE
   ================================ */
   
-  .owner-intro {
+  .owner-intro,
+  .home-intro {
     min-height: 100vh;
     padding: 120px 5% 100px;
     display: flex;
@@ -108,7 +120,8 @@
     width: 51%;
   }
   
-  .owner-intro h1 {
+  .owner-intro h1,
+  .home-intro h1 {
     color: #ff935d;
     text-shadow: 2px 2px #fff0f5;
     font-size: 80px;
@@ -127,9 +140,13 @@
     text-align: left;
   }
 
-  .owner-copy > button {
+  .hero-link {
     display: block;
+    width: fit-content;
     margin: 15px 0 0;
+    color: #000000;
+    font-size: 17px;
+    text-decoration: none;
   }
   
   .owner-section {
@@ -167,7 +184,8 @@
   }
 
   @media (max-width: 900px) {
-    .owner-intro {
+    .owner-intro,
+    .home-intro {
       min-height: 100vh;
       padding: 140px 5% 100px;
       flex-direction: column;
@@ -184,6 +202,187 @@
       max-width: 650px;
       margin: 0 auto;
       flex: none;
+    }
+  }
+
+  /* ================================
+     ABOUT, CONTACT & FOOTER
+  ================================ */
+
+  .page-content {
+    min-height: calc(100vh - 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 5% 70px;
+  }
+
+  .about-card {
+    width: min(980px, 100%);
+    max-width: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+  }
+
+  .about-card .about-copy {
+    flex: 1;
+  }
+
+  .about-card h2,
+  .contact-card h2 {
+    margin: 8px 0 20px;
+  }
+
+  .about-card img {
+    flex: 0 0 300px;
+  }
+
+  .page-button {
+    display: inline-block;
+    color: #000000;
+    margin-top: 15px;
+    text-decoration: none;
+  }
+
+  .contact-card {
+    width: min(720px, 100%);
+    padding: 40px;
+    background: #fff0f5;
+    border: 3px solid #000000;
+    border-radius: 25px;
+    box-shadow: 8px 8px 0 #000000;
+  }
+
+  .contact-card h2 {
+    color: #20061c;
+    font-size: 48px;
+  }
+
+  .contact-card > p:not(.eyebrow) {
+    color: #4c1553;
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .contact-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 0;
+    margin: 30px 0 0;
+    list-style: none;
+  }
+
+  .contact-list li {
+    padding: 18px;
+    background: #ffd8c4;
+    border: 2px solid #000000;
+    border-radius: 16px;
+  }
+
+  .contact-list span {
+    display: block;
+    color: #4c1553;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+  }
+
+  .contact-list a {
+    color: #a84219;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+
+  .site-footer {
+    padding: 28px 5%;
+    color: #fff0f5;
+    background: rgba(0, 0, 0, 0.82);
+    border-top: 3px solid #ff935d;
+  }
+
+  .site-footer p {
+    margin: 7px 0;
+  }
+
+  .footer-note {
+    color: #ff935d;
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 12px 0;
+  }
+
+  .site-footer a {
+    color: #fff0f5;
+    text-decoration-color: #ff935d;
+    text-underline-offset: 4px;
+  }
+
+  .site-footer a:hover {
+    color: #ff935d;
+  }
+
+  @media (max-width: 700px) {
+    .header {
+      height: auto;
+      min-height: 110px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px;
+    }
+
+    .logo {
+      font-size: 24px;
+    }
+
+    .nav-buttons ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .home-intro,
+    .page-content {
+      padding-top: 145px;
+    }
+
+    .home-intro h1 {
+      font-size: clamp(52px, 16vw, 80px);
+    }
+
+    .about-card {
+      flex-direction: column-reverse;
+      gap: 20px;
+      padding: 28px 22px 35px;
+      text-align: center;
+    }
+
+    .about-card img {
+      width: 220px;
+      height: 220px;
+      flex-basis: 220px;
+    }
+
+    .contact-card {
+      padding: 30px 20px;
+    }
+
+    .contact-card h2 {
+      font-size: 40px;
+    }
+
+    .contact-list {
+      grid-template-columns: 1fr;
     }
   }
 
