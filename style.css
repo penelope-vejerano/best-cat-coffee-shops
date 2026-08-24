@@ -90,6 +90,23 @@
     transform: translateY(-2px);
   }
 
+  .nav-buttons a.recommendations-nav {
+    padding: 9px 16px;
+    color: #000000;
+    background: #ff935d;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    font-weight: 700;
+    box-shadow: 3px 3px 0 #000000;
+  }
+
+  .nav-buttons a.recommendations-nav:hover,
+  .nav-buttons a.recommendations-nav[aria-current="page"] {
+    color: #000000;
+    background: #ffffff;
+    transform: translateY(-2px);
+  }
+
   .recommendations-btn {
     border: 1px solid #000000  !important;
     background: #ff935d !important;
