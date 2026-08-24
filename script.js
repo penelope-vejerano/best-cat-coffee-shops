@@ -162,8 +162,8 @@ const coffeeShops = [
     sourceLabel: "read the historical visitor report ↗",
     tags: ["archive pick", "call ahead", "Granada Street"],
     photos: [
-      { src: "assets/gilmore1.jpg", alt: "Cat café archive illustration" },
       { src: "assets/gilmore2.jpg", alt: "Historic cat café atmosphere" },
+      { src: "assets/gilmore1.jpg", alt: "Cats sharing a meal at Gilmore Cat Café" },
       { src: "assets/gilmore3.jpg", alt: "Cat lounge seating" }
     ]
   },
