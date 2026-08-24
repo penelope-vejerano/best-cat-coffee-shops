@@ -456,7 +456,6 @@
     color: inherit;
     font-family: inherit;
     text-align: center;
-    text-decoration: none;
     background: #fff0f5;
     border: 3px solid #000000;
     border-radius: 25px;
@@ -465,6 +464,16 @@
     box-shadow: 8px 8px 0 #000000;
     cursor: pointer;
     transition: transform 0.25s, box-shadow 0.25s;
+  }
+
+  .card-modal-trigger {
+    width: 100%;
+    padding: 0;
+    color: inherit;
+    background: transparent;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
   }
 
   .location-card:hover {
@@ -559,12 +568,137 @@
     margin: 8px 8px 0;
   }
 
+  .view-details {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 9px 18px;
+    color: #000000;
+    background: #ff935d;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  .view-details:hover {
+    color: #000000;
+    background: #ffffff;
+    transform: translateY(-2px);
+  }
+
   .visit-note {
     color: #fff0f5;
     font-family: Garamond, serif;
     font-size: 11px;
     margin: 28px 0 0;
     text-align: center;
+  }
+
+  /* PLACE DETAIL PAGES */
+
+  .place-page {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.34)),
+      url("assets/home.jpg");
+  }
+
+  .place-content {
+    padding: 130px 5% 70px;
+  }
+
+  .place-article {
+    width: min(1050px, 100%);
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff0f5;
+    border: 3px solid #000000;
+    border-radius: 25px;
+    box-shadow: 8px 8px 0 #000000;
+  }
+
+  .place-hero {
+    width: 100%;
+    height: min(520px, 58vw);
+    min-height: 300px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .place-copy {
+    padding: 45px 7% 55px;
+    text-align: left;
+  }
+
+  .place-copy h1 {
+    color: #20061c;
+    font-size: clamp(48px, 7vw, 78px);
+    line-height: 0.95;
+    margin: 0 0 24px;
+  }
+
+  .place-description {
+    color: #4c1553;
+    font-size: 19px;
+    line-height: 1.65;
+  }
+
+  .place-details {
+    width: 100%;
+    margin-top: 35px;
+    border-collapse: collapse;
+    font-size: 17px;
+  }
+
+  .place-details caption {
+    color: #20061c;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    text-align: left;
+  }
+
+  .place-details th,
+  .place-details td {
+    padding: 14px 16px;
+    border: 2px solid #000000;
+    vertical-align: top;
+  }
+
+  .place-details th {
+    width: 30%;
+    color: #000000;
+    background: #ff935d;
+    text-align: left;
+  }
+
+  .place-details td {
+    color: #4c1553;
+    background: #ffffff;
+  }
+
+  .back-to-guide {
+    display: inline-block;
+    margin-top: 28px;
+    color: #a84219;
+    font-weight: 700;
+  }
+
+  @media (max-width: 600px) {
+    .place-copy {
+      padding: 32px 22px 40px;
+    }
+
+    .place-details th,
+    .place-details td {
+      display: block;
+      width: 100%;
+    }
+
+    .place-details td {
+      border-top: 0;
+    }
   }
 
   /* LOCATION POP-UP MODALS */

@@ -1,6 +1,7 @@
 const coffeeShops = [
   {
     name: "Cats & Crumbs",
+    slug: "cats-and-crumbs",
     city: "Marikina City",
     label: "best overall",
     summary: "Homemade comfort food, Sagada coffee, and foster cats looking for their forever homes.",
@@ -21,6 +22,7 @@ const coffeeShops = [
   },
   {
     name: "Catpuccino Coffee House",
+    slug: "catpuccino-coffee-house",
     city: "Taguig City",
     label: "most intimate",
     summary: "Coffee, comfort, and feline company in a small neighborhood café with a relaxed pace.",
@@ -41,6 +43,7 @@ const coffeeShops = [
   },
   {
     name: "Cat Cafe Manila",
+    slug: "cat-cafe-manila",
     city: "Quezon City",
     label: "best advocacy story",
     summary: "A Maginhawa pioneer built around rescued puspins, responsible interaction, and adoption.",
@@ -61,6 +64,7 @@ const coffeeShops = [
   },
   {
     name: "Miao Cat Cafe",
+    slug: "miao-cat-cafe",
     city: "Quezon City",
     label: "pioneer pick",
     summary: "A Congressional Avenue pioneer remembered for a homey cat room, cakes, and two-hour visits.",
@@ -81,6 +85,7 @@ const coffeeShops = [
   },
   {
     name: "Bengal Brew",
+    slug: "bengal-brew",
     city: "Quezon City",
     label: "best for Bengal fans",
     summary: "A Cubao café built around playful Bengal cats in a tropical, mini-jungle-inspired lounge.",
@@ -101,6 +106,7 @@ const coffeeShops = [
   },
   {
     name: "Nekohige Cafe",
+    slug: "nekohige-cafe",
     city: "Manila",
     label: "best study nook",
     summary: "A Japanese-inspired upstairs café pairing resident cats with affordable comfort food and drinks.",
@@ -121,6 +127,7 @@ const coffeeShops = [
   },
   {
     name: "Coterie Cat Cafe",
+    slug: "coterie-cat-cafe",
     city: "Parañaque City",
     label: "best south hangout",
     summary: "A mellow Aguirre Avenue coffee and co-working spot with light bites and resident cats.",
@@ -141,6 +148,7 @@ const coffeeShops = [
   },
   {
     name: "Gilmore Cat Café",
+    slug: "gilmore-cat-cafe",
     city: "Quezon City",
     label: "archive listing",
     summary: "A former Granada Street cat café whose surviving listings and visitor reports are now historical.",
@@ -161,6 +169,7 @@ const coffeeShops = [
   },
   {
     name: "Le Cat Coffee Shop",
+    slug: "le-cat-coffee-shop",
     city: "Las Piñas City",
     label: "south pioneer",
     summary: "A pioneering southern cat café remembered for friendly cats, coffee, pastries, and family visits.",
@@ -187,21 +196,24 @@ let selectedShop = null;
 let selectedPhoto = 0;
 
 locationGrid.innerHTML = coffeeShops.map((shop, index) => `
-  <button class="location-card" type="button" data-shop-index="${index}">
-    <div class="card-image">
-      <img src="${shop.photos[0].src}" alt="${shop.photos[0].alt}">
-      <span class="rank">${String(index + 1).padStart(2, "0")}</span>
-      <span class="card-tag">${shop.label}</span>
-    </div>
-    <div class="card-copy">
-      <div>
-        <p>${shop.city.toUpperCase()}</p>
-        <h2>${shop.name}</h2>
+  <article class="location-card">
+    <button class="card-modal-trigger" type="button" data-shop-index="${index}" aria-label="Preview ${shop.name}">
+      <div class="card-image">
+        <img src="${shop.photos[0].src}" alt="${shop.photos[0].alt}">
+        <span class="rank">${String(index + 1).padStart(2, "0")}</span>
+        <span class="card-tag">${shop.label}</span>
       </div>
-      <span class="card-arrow">↗</span>
-    </div>
-    <p class="card-summary">${shop.summary}</p>
-  </button>
+      <div class="card-copy">
+        <div>
+          <p>${shop.city.toUpperCase()}</p>
+          <h2>${shop.name}</h2>
+        </div>
+        <span class="card-arrow">↗</span>
+      </div>
+      <p class="card-summary">${shop.summary}</p>
+    </button>
+    <a class="view-details" href="places/${shop.slug}.html">View details</a>
+  </article>
 `).join("");
 
 function showPhoto() {
@@ -247,7 +259,7 @@ function changePhoto(direction) {
 }
 
 locationGrid.addEventListener("click", event => {
-  const card = event.target.closest(".location-card");
+  const card = event.target.closest(".card-modal-trigger");
 
   if (card) {
     openModal(Number(card.dataset.shopIndex));
