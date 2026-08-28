@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suggest a Place | Best Cat Coffee Shops</title>
+  <link rel="stylesheet" href="../style.css?v=6">
+</head>
+<body class="place-page">
+  <header class="header">
+    <p class="logo">Best Cat Coffee Shops</p>
+    <nav class="nav-buttons">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a class="recommendations-nav" href="../coffeeshops.html">Recommendations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="suggest-content">
+    <section class="suggest-card">
+      <p class="eyebrow">HELP THE GUIDE GROW</p>
+      <h1>Suggest a place ♡</h1>
+      <p class="form-intro">
+        Know a cozy café that belongs in this guide? Share it below and I will
+        consider it for a future recommendation.
+      </p>
+
+      <form class="suggest-form" action="#" method="post">
+        <div class="form-field">
+          <label for="place-name">Place name</label>
+          <input type="text" id="place-name" name="place-name" required>
+        </div>
+
+        <fieldset>
+          <legend>What category best describes it?</legend>
+          <div class="choice-list">
+            <div class="choice">
+              <input type="radio" id="category-cat-cafe" name="category" value="cat-cafe">
+              <label for="category-cat-cafe">Cat café</label>
+            </div>
+            <div class="choice">
+              <input type="radio" id="category-coffee-shop" name="category" value="coffee-shop">
+              <label for="category-coffee-shop">Coffee shop</label>
+            </div>
+            <div class="choice">
+              <input type="radio" id="category-pet-friendly" name="category" value="pet-friendly-cafe">
+              <label for="category-pet-friendly">Pet-friendly café</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>What's good about it? Choose any that apply.</legend>
+          <div class="choice-list">
+            <div class="choice">
+              <input type="checkbox" id="good-affordable" name="good-points" value="affordable">
+              <label for="good-affordable">Affordable</label>
+            </div>
+            <div class="choice">
+              <input type="checkbox" id="good-coffee" name="good-points" value="good-coffee">
+              <label for="good-coffee">Great coffee</label>
+            </div>
+            <div class="choice">
+              <input type="checkbox" id="good-cat-care" name="good-points" value="responsible-cat-care">
+              <label for="good-cat-care">Responsible cat care</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-field">
+          <label for="contact-email">Contact email</label>
+          <input type="email" id="contact-email" name="contact-email" required>
+        </div>
+
+        <button class="submit-suggestion" type="submit">Send suggestion</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-note">Made with coffee, curiosity, and cat cuddles ♡</p>
+    <div class="footer-links">
+      <a href="../about.html">About the guide</a>
+      <a href="../contact.html">Get in touch</a>
+    </div>
+    <p><a href="mailto:penelope.vejerano@tup.edu.ph">penelope.vejerano@tup.edu.ph</a></p>
+  </footer>
+</body>
+</html>
