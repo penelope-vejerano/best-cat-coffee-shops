@@ -3,7 +3,7 @@
 ================================ */
 
 :root {
-   --brand-color: #ff935d;
+  --brand-color: #a84219;
    --dark-ink: #000000;
    --muted-grey: #6b6260;
    --light-background: #fff0f5;
@@ -342,14 +342,14 @@
   .suggest-form fieldset {
     padding: 22px;
     margin: 0 0 22px;
-    border: 2px solid #000000;
+    border: 2px solid var(--dark-ink);
     border-radius: 16px;
   }
 
   .contact-form legend,
   .suggest-form legend {
     padding: 0 9px;
-    color: #20061c;
+    color: var(--brand-color);
     font-size: 19px;
     font-weight: 700;
   }
@@ -374,9 +374,9 @@
   .form-field textarea {
     width: 100%;
     padding: 11px 12px;
-    color: #20061c;
+    color: var(--dark-ink);
     background: #ffffff;
-    border: 2px solid #000000;
+    border: 2px solid var(--dark-ink);
     border-radius: 8px;
     font: inherit;
   }
@@ -414,11 +414,11 @@
 
   .submit-suggestion {
     padding: 11px 22px;
-    color: #000000;
-    background: #ff935d;
-    border: 2px solid #000000;
+    color: var(--dark-ink);
+    background: var(--brand-color);
+    border: 0;
     border-radius: 9px;
-    box-shadow: 3px 3px 0 #000000;
+    box-shadow: 3px 3px 0 var(--dark-ink);
     font: inherit;
     font-weight: 700;
     cursor: pointer;
@@ -429,13 +429,13 @@
     transform: translateY(-2px);
   }
 
-  .form-field input:focus-visible,
-  .form-field select:focus-visible,
-  .form-field textarea:focus-visible,
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus,
   .choice input:focus-visible,
   .submit-suggestion:focus-visible {
-    outline: 4px solid #a84219;
-    outline-offset: 3px;
+    outline: 3px solid var(--brand-color);
+    outline-offset: 2px;
   }
 
     /* ================================
@@ -621,8 +621,10 @@
     text-align: center;
     background: var(--light-background);
     border: 3px solid var(--dark-ink);
+    border-left: 6px solid var(--brand-color);
     border-radius: 25px;
-    padding: 14px 14px 24px;
+    padding: 16px 16px 24px;
+    margin-bottom: 24px;
     overflow: hidden;
     box-shadow: 8px 8px 0 var(--dark-ink);
     cursor: pointer;
@@ -711,6 +713,7 @@
   }
 
   .card-copy h2 {
+    color: var(--dark-ink);
     font-size: 30px;
     line-height: 1;
     margin: 0;
