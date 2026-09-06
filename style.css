@@ -1,5 +1,17 @@
 /* ================================
-   GENERAL
+  VARIABLES
+================================ */
+
+:root {
+   --brand-color: #ff935d;
+   --dark-ink: #000000;
+   --muted-grey: #6b6260;
+   --light-background: #fff0f5;
+   --soft-accent: #ffd8c4;
+  }
+
+/* ================================
+  BASE STYLES
 ================================ */
 
 * {
@@ -16,8 +28,9 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    color: #000000;
+    color: var(--dark-ink);
     font-family: Garamond, serif;
+    line-height: 1.5;
     text-align: center;
     margin: 0;
     min-height: 100vh;
@@ -30,9 +43,9 @@
     cursor: url("assets/cat-paw-cursor.png?v=2") 8 8, auto !important;
   }
   
-  /* ================================
-     HEADER
-  ================================ */
+    /* ================================
+      LAYOUT REGIONS: HEADER AND NAV
+    ================================ */
   
   .header {
     position: fixed;
@@ -70,6 +83,10 @@
     list-style: none;
   }
 
+  .nav-buttons li {
+    display: inline-block;
+  }
+
   .nav-buttons a {
     display: inline-block;
     background: none;
@@ -86,42 +103,42 @@
 
   .nav-buttons a:hover,
   .nav-buttons a[aria-current="page"] {
-    color: #ff935d;
+    color: var(--brand-color);
     transform: translateY(-2px);
   }
 
   .nav-buttons a.recommendations-nav {
     padding: 9px 16px;
-    color: #000000;
-    background: #ff935d;
-    border: 2px solid #000000;
+    color: var(--dark-ink);
+    background: var(--brand-color);
+    border: 2px solid var(--dark-ink);
     border-radius: 8px;
     font-weight: 700;
-    box-shadow: 3px 3px 0 #000000;
+    box-shadow: 3px 3px 0 var(--dark-ink);
   }
 
   .nav-buttons a.recommendations-nav:hover,
   .nav-buttons a.recommendations-nav[aria-current="page"] {
-    color: #000000;
+    color: var(--dark-ink);
     background: #ffffff;
     transform: translateY(-2px);
   }
 
   .recommendations-btn {
     border: 1px solid #000000  !important;
-    background: #ff935d !important;
+    background: var(--brand-color) !important;
     border-radius: 6px;
     padding: 7px 15px !important;
   }
   
   .recommendations-btn:hover {
     background: #fff;
-    color: #000000 !important;
+    color: var(--dark-ink) !important;
   }
   
-  /* ================================
-     OWNER PAGE
-  ================================ */
+    /* ================================
+      LAYOUT REGIONS: MAIN CONTENT
+    ================================ */
   
   .owner-intro,
   .home-intro {
@@ -139,7 +156,7 @@
   
   .owner-intro h1,
   .home-intro h1 {
-    color: #ff935d;
+    color: var(--brand-color);
     text-shadow: 2px 2px #fff0f5;
     font-size: 80px;
     line-height: 1;
@@ -149,7 +166,7 @@
   
   .owner-copy > p {
     margin: 0;
-    color: #000000;
+    color: var(--dark-ink);
     font-size: 22px;
     font-style: italic;
     max-width: 650px;
@@ -167,14 +184,14 @@
   }
   
   .owner-section {
-    background-color: #fff0f5;
-    border: 3px solid #000000;
+    background-color: var(--light-background);
+    border: 3px solid var(--dark-ink);
     border-radius: 25px;
     padding: 30px 30px 45px;
     width: 100%;
     max-width: 42%;
     margin: 0;
-    box-shadow: 8px 8px 0px #000000;
+    box-shadow: 8px 8px 0px var(--dark-ink);
     flex: 0 1 42%;
   }
   
@@ -222,9 +239,9 @@
     }
   }
 
-  /* ================================
-     ABOUT, CONTACT & FOOTER
-  ================================ */
+    /* ================================
+      COMPONENTS: CARDS AND FORMS
+    ================================ */
 
   .page-content {
     min-height: calc(100vh - 180px);
@@ -421,7 +438,11 @@
     outline-offset: 3px;
   }
 
-  .site-footer {
+    /* ================================
+      LAYOUT REGION: FOOTER
+    ================================ */
+
+    .site-footer {
     padding: 28px 5%;
     color: #fff0f5;
     background: rgba(0, 0, 0, 0.82);
@@ -509,9 +530,9 @@
     }
   }
 
-  /* ================================
-     COFFEE SHOP RECOMMENDATIONS
-  ================================ */
+    /* ================================
+      COMPONENTS: PLACE ENTRY CARDS
+    ================================ */
 
   .shops-page {
     background-image: url("assets/home.jpg");
@@ -598,12 +619,12 @@
     color: inherit;
     font-family: inherit;
     text-align: center;
-    background: #fff0f5;
-    border: 3px solid #000000;
+    background: var(--light-background);
+    border: 3px solid var(--dark-ink);
     border-radius: 25px;
     padding: 14px 14px 24px;
     overflow: hidden;
-    box-shadow: 8px 8px 0 #000000;
+    box-shadow: 8px 8px 0 var(--dark-ink);
     cursor: pointer;
     transition: transform 0.25s, box-shadow 0.25s;
   }
@@ -822,7 +843,7 @@
   }
 
   .place-details caption {
-    color: #20061c;
+    color: var(--muted-grey);
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 14px;
