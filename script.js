@@ -196,7 +196,7 @@ let selectedShop = null;
 let selectedPhoto = 0;
 
 locationGrid.innerHTML = coffeeShops.map((shop, index) => `
-  <article class="location-card">
+  <article class="location-card place-card">
     <button class="card-modal-trigger" type="button" data-shop-index="${index}" aria-label="Preview ${shop.name}">
       <div class="card-image">
         <img src="${shop.photos[0].src}" alt="${shop.photos[0].alt}">
